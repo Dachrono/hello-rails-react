@@ -1142,6 +1142,13 @@
     "@types/react" "*"
     hoist-non-react-statics "^3.3.0"
 
+"@types/http-proxy@^1.17.8":
+  version "1.17.14"
+  resolved "https://registry.npmjs.org/@types/http-proxy/-/http-proxy-1.17.14.tgz"
+  integrity sha512-SSrD0c1OQzlFX7pGu1eXxSEjemej64aaNPRhhVYUGqXh0BtldAAx37MG8btcumvpgKyZp1F5Gn3JkktdxiFv6w==
+  dependencies:
+    "@types/node" "*"
+
 "@types/json-schema@*", "@types/json-schema@^7.0.8", "@types/json-schema@^7.0.9":
   version "7.0.15"
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz"
@@ -1886,6 +1893,11 @@ esutils@^2.0.2:
   resolved "https://registry.npmjs.org/esutils/-/esutils-2.0.3.tgz"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
+eventemitter3@^4.0.0:
+  version "4.0.7"
+  resolved "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.7.tgz"
+  integrity sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==
+
 events@^3.2.0:
   version "3.3.0"
   resolved "https://registry.npmjs.org/events/-/events-3.3.0.tgz"
@@ -1993,7 +2005,7 @@ flatted@^3.2.9:
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.9.tgz"
   integrity sha512-36yxDn5H7OFZQla0/jFJmbIKTdZAQHngCedGxiMmpNfEZM0sdEeT+WczLQrjK6D7o2aiyLYDnkw0R3JK0Qv1RQ==
 
-follow-redirects@^1.15.0:
+follow-redirects@^1.0.0, follow-redirects@^1.15.0:
   version "1.15.3"
   resolved "https://registry.npmjs.org/follow-redirects/-/follow-redirects-1.15.3.tgz"
   integrity sha512-1VzOtuEM8pC9SFU1E+8KfTjZyMztRsgEfwQl44z8A25uy13jSzTj6dyK2Df52iV0vgHCfBwLhDWevLn95w5v6Q==
@@ -2159,6 +2171,26 @@ htmlparser2@^3.10.0:
     inherits "^2.0.1"
     readable-stream "^3.1.1"
 
+http-proxy-middleware@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.npmjs.org/http-proxy-middleware/-/http-proxy-middleware-2.0.6.tgz"
+  integrity sha512-ya/UeJ6HVBYxrgYotAZo1KvPWlgB48kUJLDePFeneHsVujFaW5WNj2NgWCAE//B1Dl02BIfYlpNgBy8Kf8Rjmw==
+  dependencies:
+    "@types/http-proxy" "^1.17.8"
+    http-proxy "^1.18.1"
+    is-glob "^4.0.1"
+    is-plain-obj "^3.0.0"
+    micromatch "^4.0.2"
+
+http-proxy@^1.18.1:
+  version "1.18.1"
+  resolved "https://registry.npmjs.org/http-proxy/-/http-proxy-1.18.1.tgz"
+  integrity sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ==
+  dependencies:
+    eventemitter3 "^4.0.0"
+    follow-redirects "^1.0.0"
+    requires-port "^1.0.0"
+
 ignore@^5.1.8, ignore@^5.2.0:
   version "5.2.4"
   resolved "https://registry.npmjs.org/ignore/-/ignore-5.2.4.tgz"
@@ -2294,6 +2326,11 @@ is-plain-obj@^2.0.0:
   version "2.1.0"
   resolved "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-2.1.0.tgz"
   integrity sha512-YWnfyRwxL/+SsrWYfOpUtz5b3YD+nyfkHvjbcanzk8zgyO4ASD67uVMRt8k5bM4lLMDnXfriRhOpemw+NfT1eA==
+
+is-plain-obj@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.npmjs.org/is-plain-obj/-/is-plain-obj-3.0.0.tgz"
+  integrity sha512-gwsOE28k+23GP1B6vFl1oVh/WOzmawBrKwo5Ev6wMKzPkaXaCDIQKzLnvsA42DRlbVTWorkgTKIviAKCWkfUwA==
 
 is-plain-object@^2.0.4:
   version "2.0.4"
@@ -2550,7 +2587,7 @@ micromark@~2.11.0:
     debug "^4.0.0"
     parse-entities "^2.0.0"
 
-micromatch@^4.0.4:
+micromatch@^4.0.2, micromatch@^4.0.4:
   version "4.0.5"
   resolved "https://registry.npmjs.org/micromatch/-/micromatch-4.0.5.tgz"
   integrity sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==
@@ -3055,6 +3092,11 @@ require-from-string@^2.0.2:
   version "2.0.2"
   resolved "https://registry.npmjs.org/require-from-string/-/require-from-string-2.0.2.tgz"
   integrity sha512-Xf0nWe6RseziFMu+Ap9biiUbmplq6S9/p+7w7YXP/JBHhrUDDUhwa+vANyubuqfZWTveU//DYVGsDG7RKL/vEw==
+
+requires-port@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/requires-port/-/requires-port-1.0.0.tgz"
+  integrity sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==
 
 reselect@^4.1.8:
   version "4.1.8"
